@@ -1,0 +1,38 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+.env
+
+# Build artifacts
+.open-next/
+.wrangler/
+
+# TypeScript build info (build artifact)
+*.tsbuildinfo
+
+# Local databases created by npm run setup -- --local and npm run demo
+.local/
+.demo/

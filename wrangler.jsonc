@@ -1,0 +1,26 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "victory-youth",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-09-08",
+  // esbuild's keepNames inserts __name(...) calls into functions; next-themes
+  // serialises its theme function into an inline <script>, where __name does
+  // not exist ("__name is not defined" → dark-mode flash). Keep it off.
+  "keep_names": false,
+  "compatibility_flags": [
+    "nodejs_compat",
+    "nodejs_compat_populate_process_env"
+  ],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  // MEDIA database (Cloudinary URLs + metadata) — see src/db/index.ts
+  "d1_databases": [
+    {
+      "binding": "MEDIA_DB",
+      "database_name": "victory-youth-media",
+      "database_id": "4dc7d7ca-db64-4a2f-a405-d016a2e3f819"
+    }
+  ]
+}
